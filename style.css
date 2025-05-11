@@ -1,0 +1,385 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  min-width: 960px;
+  font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 32px;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.body-wraper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+  
+.container {
+  max-width: 928px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+  
+.page-header {
+  margin: 30px 10px 40px 60px;
+  padding: 0px 0px 5px;
+  
+}
+  
+.page-header .container {
+  max-width: 1408px;
+  text-align: right;
+}
+  
+.page-header a {
+  position: relative;
+  margin-right: 64px;
+  padding-bottom: 10px;
+  padding-top: 9px;
+  font-weight: 500;
+  text-decoration: none;
+  background-repeat: no-repeat;
+  background-position: left;
+  color: inherit;
+}
+
+.page-header a::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  transition: width 200ms;
+}
+
+.page-header a:hover::after {
+width: 100%;
+}
+
+.page-header a:active {
+opacity: 0.5;
+}
+
+.theme-header {
+  display: flex;
+  justify-content: right;
+}
+
+.theme-header img {
+  width: 25px;
+  height: 40px;
+}
+  
+.theme-button {
+  padding: 2px 10px;
+  display: inline-block;
+  vertical-align: baseline;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 20px;
+  /*margin-right: 700px;*/
+  border: none;
+  transition: background-color 100ms, box-shadow 100ms;
+}
+  
+  
+.theme-button:active {
+  box-shadow: none;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+}
+
+.nav-list {
+  display: flex;
+  column-gap: 50px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.nav-button {
+  display: none;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border: none;
+  outline: none;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.nav-button span {
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  left: 5px;
+  transition: background-color .3s, opacity .3s, transform .5s;
+  will-change: transform;
+}
+
+.nav-button span:nth-child(1) {
+  transform: translateY(-10px);
+}
+
+.nav-button span:nth-child(3) {
+  transform: translateY(10px);
+}
+
+.page-header.open .nav-button span:nth-child(1) {
+  transform: translateY(0) rotate(45deg);
+}
+
+.page-header.open .nav-button span:nth-child(2) {
+  opacity: 0;
+}
+
+.page-header.open .nav-button span:nth-child(3) {
+  transform: translateY(0) rotate(-45deg);
+}
+
+li {
+  list-style-type: none;
+}
+  
+.img {
+  vertical-align: bottom;
+}
+
+.header-email {
+  padding-left: 30px;
+}
+
+.header-phone {
+  padding-left: 25px; 
+}
+  
+.hero-image {
+  margin-top: 250px;
+  margin-bottom: 620px;
+}
+  
+.hero-image .container {
+  max-width: 1408px;
+  text-align: center;
+}
+  
+.heading {
+  margin: 0 0 16px;
+  font-family: "Old Standard TT", "Times", "Times New Roman", serif;
+  font-size: 88px;
+  line-height: 96px;
+  font-weight: 400;
+}
+  
+.hero-image p {
+  margin: 0;
+  font-size: 32px;
+  line-height: 48px;
+}
+  
+.intro {
+  margin: 0 0 120px;
+}
+  
+.subheading {
+  margin: 0 0 56px;
+  font-family: "Old Standard TT", "Times", "Times New Roman", serif;
+  font-size: 64px;
+  line-height: 80px;
+  font-weight: 400;
+  text-align: center;
+}
+  
+.user-image {
+  margin: 0 0 32px;
+  text-align: center;
+}
+  
+.intro h3,
+.portfolio h3 {
+  margin: 0 0 12px;
+  font-size: 28px;
+  line-height: 40px;
+  font-weight: 500;
+}
+  
+.intro p {
+  margin: 0 0 32px;
+}
+  
+.skills-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+  
+.skills-card {
+  padding-left: 32px;
+  background-repeat: no-repeat;
+  background-position: left;
+  text-align: center;
+}
+
+.skills-card p {
+  text-align: start;
+}
+  
+.portfolio {
+  margin: 0 0 120px;
+}
+  
+.project {
+  display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ margin-bottom: 50px;
+}
+
+.project-title {
+  padding-top: 10px;
+}
+
+.swiper {
+  width: 1000px;
+  /*height: 500px;*/
+  margin-bottom: 10px;
+}
+
+.swiper-slide {
+  text-align: center;
+}
+
+.swiper-slide img {
+  max-height: 500px;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 50px;
+}
+.swiper-pagination-bullet {
+  width: 25px;
+  height: 25px;
+
+}
+.swiper-scrollbar-drag {
+  cursor: pointer;
+}
+ 
+.button {
+  padding: 6px 20px;
+  display: inline-block;
+  vertical-align: baseline;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 15px;
+  transition: background-color 100ms, box-shadow 100ms;
+    
+}
+
+.button:active {
+  box-shadow: none;
+}
+
+.page-footer {
+  padding: 40px 0;
+}
+
+.contacts {
+  text-align: center;
+  padding-bottom: 0px;
+}
+
+@media (max-width: 999px) {
+  .theme-header {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 73px;
+    z-index: 3;
+  }
+  .nav-button {
+    display: block;
+    position: fixed;
+    top: 90px;
+    right: 30px;
+  }
+  .nav {
+    position: fixed;
+    right: -150px;
+    top: 0;
+    width: 150px;
+    padding: 75px 20px 20px 20px;
+    visibility: hidden;
+    transition: transform .2s, visibility .15s;
+    will-change: transform;
+    z-index: 2;
+  }
+  .nav-list {
+    display: block;
+  }
+  .nav-item:not(:last-child) {
+    margin-right: 0;
+  }
+  .nav-link {
+    font-size: 21px;
+    display: block;
+    padding: 10px;
+  }
+  .page-header.open .nav {
+    transform: translateX(-100%);
+    visibility: visible;
+  }
+  .theme-button {
+    position: fixed;
+  }
+  .skills p {
+    font-size: 28px;
+  }
+  .f-mail {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  .f-phone {
+    font-size: 20px;
+  }
+  .page-footer h3 {
+    font-size: 30px;
+  }
+  &::before, &::after {
+    display: none;
+  }
+  .page-header a::after {
+    content: none;
+  }
+  .theme-button {
+    padding: 5px 10px;
+    font-size: 16px;
+  }
+  .button {
+    padding: 6px 20px;
+    font-size: 20px;
+  }
+  .swiper {
+    width: 100%;
+  }
+}

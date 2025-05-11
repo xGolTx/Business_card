@@ -1,0 +1,106 @@
+body {
+  color: #222222;
+  background-color: #f2f4f6;
+  background-image: url("img/hero-bg.jpg");
+}
+
+.page-header a {
+  color: #288be6;
+}
+
+.page-header a:focus,
+.page-header a:hover,
+.page-footer a:focus,
+.page-footer a:hover {
+  color: #60aef7;
+}
+
+.page-header a::after,
+.page-footer a::after {
+  background-color: #60aef7;
+}
+
+.header-email:focus,
+.header-email:hover,
+.footer-email:focus,
+.footer-email:hover {
+  background-image: url("img/icon-email-alt-light.svg");
+}
+
+.header-phone:focus,
+.header-phone:hover,
+.footer-phone:focus,
+.footer-phone:hover {
+  background-image: url("img/icon-phone-alt-light.svg");
+}
+
+.theme-button {
+  background-color: #ffffff;
+  color: #288be6;
+  box-shadow: 0 4px 16px rgba(74, 62, 233, 0.692);
+}
+
+.theme-button:focus,
+.theme-button:hover {
+  background-color: #288be6;
+  box-shadow: 0 4px 32px rgba(20, 7, 204, 0.692);
+  color: #ffffff;
+}
+
+.theme-button:active {
+  background-color: rgba(20, 7, 204, 0.692);
+}
+
+.theme-button[data-theme="dark"] {
+  display: block;
+}
+
+.theme-button[data-theme="light"] {
+  display: none;
+}
+
+.header-email {
+  background-image: url("img/icon-email-header.svg");
+}
+
+.header-phone {
+  background-image: url("img/icon-phone-header.svg");
+}
+
+.nav-button {
+  background-color: transparent;
+}
+
+.nav-button span {
+  background-color: #288be6;
+}
+
+.button {
+  background-color: #288be6;
+  color: #ffffff;
+  box-shadow: 0 4px 16px rgba(40, 139, 230, 0.4);
+}
+
+.button:focus,
+.button:hover {
+  background-color: #4399eb;
+  box-shadow: 0 4px 32px rgba(40, 139, 230, 0.6);
+}
+
+.button:active {
+  background-color: #1b63a7;
+  box-shadow: none;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  color: #288be6;
+}
+
+.swiper-pagination-bullet {
+  background: #288be6;
+
+}
+.swiper-scrollbar-drag {
+  background: #288be6;
+}
